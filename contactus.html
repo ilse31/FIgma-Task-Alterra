@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+        body {
+            color: #19345E;
+        }
+
+        .kiri {
+            display: none;
+        }
+
+        button {
+            border-radius: 20px;
+            background-color: #F47522;
+            padding: 8px 19px;
+            color: white;
+            margin: 0;
+            border: 1px;
+        }
+
+        button:hover {
+            background-color: #e4640f;
+        }
+
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        #myDiv {
+            display: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .kiri {
+                display: block;
+            }
+
+            .logo {
+                background-color: #19345EA6;
+                height: 750px;
+                width: 500px;
+            }
+
+            .logo-alta {
+                margin-bottom: 300px;
+                opacity: 0, 5;
+            }
+        }
+    </style>
+    <title>Hello, world!</title>
+</head>
+
+<body onload="loadFunc()">
+    <div class="container">
+        <div class="row vh-100 align-items-center justify-content-center" id="loader">
+            <div class="spinner-grow text-primary " style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ms-0 ps-0 animate-bottom" style="display:none;" id="myDiv">
+        <div class="row justify-content-between">
+            <div class="col-md-4 kiri">
+                <img src="img/charles-rRWiVQzLm7k-unsplash.jpg" width="500px" height="750px" alt="" srcset="">
+                <div class="logo position-absolute top-0 start-0">
+                </div>
+                <img src="img/logo-ALTA-v2@2x.png" width="350px" class="position-absolute top-50 start-0 ms-5 ps-5"
+                    alt="">
+            </div>
+            <div class="col-md-6 p-3 m-3">
+                <h1>Contact us</h1>
+                <form class="form needs-validation" novalidate>
+                    <div class="mb-3 has-validation">
+                        <label for="exampleInputEmail1" class="form-label fs-4">Full Name</label>
+                        <input type="email" class="form-control" id="fullName" required>
+                        <div class="invalid-feedback">Email Kosong</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label fs-4">Email Adress</label>
+                        <input type="password" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label fs-4">Phone Number</label>
+                        <input type="email" class="form-control" id="phone">
+                    </div>
+                    <div class=" mb-3">
+                        <label for="exampleInputEmail1" class="form-label fs-4">Nationality</label>
+                        <select class="form-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label fs-4">Message</label>
+                        <textarea name="message" class="form-control" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <button class="submit" onclick="newpage()" name="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="loader"></div>
+
+
+    <script>
+        var loading;
+
+        function loadFunc()
+        {
+            loading = setTimeout( showPage, 3000 );
+        }
+
+        function showPage()
+        {
+            document.getElementById( "loader" ).style.display = "none";
+            document.getElementById( "myDiv" ).style.display = "block";
+        }
+        ( function ()
+        {
+            var forms = document.querySelectorAll( '.needs-validation' )
+            Array.prototype.slice.call( forms )
+                .forEach( function ( form )
+                {
+                    form.addEventListener( 'submit', function ( event )
+                    {
+                        if ( !form.checkValidity() )
+                        {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add( 'was-validated' )
+                    }, false )
+                } )
+        } )()
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+        body {
+            background-image: url("img/bg-img.png");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        section .project {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navb-logo {
+            margin-left: 15px;
+        }
+
+        .navb-item {
+            margin-left: 15px;
+        }
+
+        .content {
+            color: #19345E;
+        }
+
+        button {
+            border-radius: 20px;
+            background-color: #F47522;
+            padding: 6px 11px;
+            margin: 0;
+            border: 1px;
+        }
+
+        button:hover {
+            background-color: #e4640f;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        h4 {
+            text-align: center;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+        }
+
+        .kanan {
+            margin-left: 0;
+        }
+
+        @media only screen and (min-width: 720px) {
+            .navb-logo {
+                margin-left: 30px;
+            }
+
+            .navb-item {
+                margin-left: 30px;
+            }
+
+            .content {
+                text-align: left;
+            }
+
+            h1 {
+                text-align: left;
+                font-size: 85px;
+                font-weight: 700;
+            }
+
+            .kanan {
+                margin-left: 5em;
+            }
+
+            h4 {
+                text-align: left;
+                font-weight: 500;
+                font-size: 35px;
+            }
+
+            h5 {
+                text-align: left;
+                font-weight: 500;
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-md-top">
+        <div class="container">
+            <a class="navbar-brand d-flex navb-logo" href="#">
+                <img src="./img/logo-ALTA@2x.png" alt="" width="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex justify-content-start">
+                    <li class="nav-item navb-item">
+                        <a class="nav-link" style="color: #F47522;" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item navb-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item navb-item">
+                        <a class="nav-link" href="#">EXPERIENCE</a>
+                    </li>
+                    <li class="nav-item navb-item me-5">
+                        <a class="nav-link" href="contactus.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="project">
+        <div class="container">
+            <div class="row vh-100 justify-content-center text-center align-items-center">
+                <div class="col-lg-4">
+                    <img src="./img/matthew-hamilton-tNCH0sKSZbA-unsplash.jpg" width="355px"
+                        class="rounded-circle profile" alt="" srcset="">
+                </div>
+                <div class="col-lg-6 kanan">
+                    <div class="content mb-5 mt-3">
+                        <h5>Hi My Name is</h5>
+                        <h1>Anne Sullivan</h1>
+                        <h4>I Build things for the web</h4>
+                        <button class="orange text-white mt-4">Get In Touch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
