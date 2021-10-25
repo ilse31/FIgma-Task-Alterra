@@ -76,7 +76,7 @@
 
             .logo {
                 background-color: #19345EA6;
-                height: 750px;
+                height: 850px;
                 width: 500px;
             }
 
@@ -101,7 +101,7 @@
     <div class="container-fluid ms-0 ps-0 animate-bottom" style="display:none;" id="myDiv">
         <div class="row justify-content-between">
             <div class="col-md-4 kiri">
-                <img src="img/charles-rRWiVQzLm7k-unsplash.jpg" width="500px" height="750px" alt="" srcset="">
+                <img src="img/charles-rRWiVQzLm7k-unsplash.jpg" width="500px" height="850px" alt="" srcset="">
                 <div class="logo position-absolute top-0 start-0">
                 </div>
                 <img src="img/logo-ALTA-v2@2x.png" width="350px" class="position-absolute top-50 start-0 ms-5 ps-5"
@@ -112,29 +112,38 @@
                 <form class="form needs-validation" novalidate>
                     <div class="mb-3 has-validation">
                         <label for="exampleInputEmail1" class="form-label fs-4">Full Name</label>
-                        <input type="email" class="form-control" id="fullName" required>
-                        <div class="invalid-feedback">Email Kosong</div>
+                        <input type="email" class="form-control" placeholder="Your Full Name Here..." id="fullName"
+                            required>
+                        <div class="invalid-feedback">Name Kosong</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label fs-4">Email Adress</label>
-                        <input type="password" class="form-control" id="email">
+                        <input type="password" placeholder="example@domail.com" required class="form-control"
+                            id="email">
+                        <div class="invalid-feedback">Email Kosong</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label fs-4">Phone Number</label>
-                        <input type="email" class="form-control" id="phone">
+                        <input type="email" class="form-control" required placeholder="08573890xxxxx" id="phone">
+                        <div class="invalid-feedback">Phone Kosong</div>
                     </div>
                     <div class=" mb-3">
                         <label for="exampleInputEmail1" class="form-label fs-4">Nationality</label>
-                        <select class="form-select">
-                            <option selected>Open this select menu</option>
+                        <select class="form-select" required>
+                            <option selected>Selectted</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Please select a valid Nationality.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label fs-4">Message</label>
-                        <textarea name="message" class="form-control" id="" cols="30" rows="5"></textarea>
+                        <textarea name="message" class="form-control" required id=""
+                            placeholder="Your Full Name Here..." cols="30" rows="5"></textarea>
+                        <div class="invalid-feedback">Message Kosong</div>
                     </div>
                     <button class="submit" onclick="newpage()" name="submit" type="submit">Submit</button>
                 </form>
